@@ -31,4 +31,22 @@ fn main() {
     let chars = "Ab"; // all good
     let smile = '\u{1F601}';
     println!("{}", smile); // go ahead, try it!
+
+    // Strings
+    let cat: &str = "Fluffy"; // <- these two are slices not real strings
+    let cat: &'static str = "Fluffy"; // <- these two are slices not real strings
+    
+    let dog = String::new();
+    let mut  dog = String::from("Max");
+    
+    // String methods
+    let owner = format!("Hi i'm {} the owner of  {}", "Mark", dog);
+    println!("{}", dog.len());
+
+    dog.push(' '); // <- pushes a white space after max
+    dog.push_str("the dog");
+    println!("{}", dog); // <- check it out "Max the dog"
+
+    let new_dog = dog.replace("the", "is my");
+    println!("{}", new_dog); // <- check it out "Max is my dog"
 }
